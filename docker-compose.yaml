@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  rust-app:
+    image: rust:1.75.0-buster
+   # user: "admin:1234"
+    volumes:
+      - .:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    command: cargo run
