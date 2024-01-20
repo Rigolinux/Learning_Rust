@@ -1,17 +1,44 @@
 #[allow(unused_variables, unused_mut, dead_code)]
 fn main() {
-    let (x, y) = (1, 2);
-    let mut z = 5;
-
+    fn main() {
+        let mut sum = 0;
+        for i in -3..2 {
+            sum += i
+        }
+        println!("sum is {}", sum);
+        assert!(sum == -3);
     
+        for c in 'a'..='z' {
+            println!("{}",c);
+        }
+    }
     
 }
 
+#[allow(dead_code,unused_variables)]
+fn arryas_code() {
+    let arr = [1, 2, 3, 4];
+
+   
+    match arr {
+        [first, middle @ .., last] => {
+            println!("First is {}", first);
+            println!("Middle is {:?}", middle);
+            println!("Last is {}", last);
+        } 
+
+    }
+
+    
+}
+
+
+#[allow(dead_code,unused_variables)]
 fn compare(x: i32, y: i32) -> bool {
     x == y
 }
-
-fn testVar() {
+#[allow(dead_code,unused_variables)]
+fn test_var() {
     let mut x = 5;
    
     println!("The value of x is: {}", x);
